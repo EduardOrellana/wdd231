@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Erick Orellana">
+    <meta name="description" content="W01 Assignment: Course Home Page">
+    <link rel="icon" href="" type="image/x-icon">
+    <title>WDD 231: Web Frontend Development I</title>
+    <link href="styles/index-large.css" type="text/css" rel="stylesheet">
+    <link href="styles/index.css" type="text/css" rel="stylesheet">
+    <script src="scripts/index.js" defer></script>
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div id="photo">
+            <img id="me-photo" src="images/Picture1.webp" width="50%" loading="lazy" alt="Erick Photo">
+        </div>
+        <h1>Erick Eduardo Orellana Umaña</h1>
+    </header>
+    <button id="menu"></button>
+    <nav id="navMenu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="#">Github Profile</a></li>
+            <li><a href="https://www.linkedin.com/in/erick-eduardo-orellana-uma%C3%B1a-8297b1222">LinkedIn</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="course-work">
+            <h2>Course Work</h2>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <p></p>
+            </ul>
+        </section>
+        <section id="country">
+            <h2>Peten, Guatemala</h2>
+            <figure id="tikal-container">
+                <picture id="tikal-img">
+                    <source srcset="images/tikal-large.webp" media="(min-width: 700px)">
+                    <source srcset="images/tikal-mobilie-view.webp" media="(max-width: 699px)">
+                    <img src="images/tikal-large.webp" alt="Tikal" width="60%" loading="lazy">
+                </picture>
+                <figcaption>Tikal, Peten</figcaption>
+            </figure>
+        </section>
+        <section id="certificate-content">
+            <h2>Web and Computer Programer Certificate</h2>
+            <div id="buttons-filter">
+                <button class="general-button" id="all-courses" type="button">All</button>
+                <button class="general-button" id="cse" type="button">CSE</button>
+                <button class="general-button" id="wdd" type="button">WDD</button>
+            </div>
+            <div class="container-courses">
+                <!--Here we are going to use Javascript-->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>
+            <span>&copy;</span>
+            <span id="currentyear"></span>
+            Erick Orellana
+            Guatemala
+        </p>
+        <p id="modified"></p>
+        <hr>
+        <img src="images/guatemalaFlag.png" width="50" loading="lazy" alt="guatemalaFlag">
+    </footer>
+</body>
+
+</html>
