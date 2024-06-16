@@ -11,7 +11,7 @@
     --varBackgroundMenu: #000000;
     --varBackgroundColor2: #66301d;
 
-    --varFont: "Poppins", "sans-serif";
+    --varFont: "Roboto", sans-serif;
 }
 
 * {
@@ -23,6 +23,8 @@
 
 body {
     width: 100%;
+    font-family: var(--varFont);
+    font-weight: 400;
 }
 
 header {
@@ -35,7 +37,7 @@ header {
 header h1 {
     font-size: 200%;
     text-align: center;
-    font-family: var(--varFont);
+    font-weight: 100;
     color: white;
     margin-left: -5rem;
 }
@@ -72,7 +74,6 @@ header h1 {
 }
 
 #navMenu a {
-    font-family: var(--varFont);
     color: white;
     text-decoration: none;
     padding: 0;
@@ -131,7 +132,7 @@ main h2 {
 
 #course-work>ul {
     padding: 0 3rem;
-    font-weight: bold;
+    font-weight: 400;
 }
 
 #course-work>ul>li {
@@ -146,7 +147,6 @@ main h2 {
 
 #tikal-container {
     padding: 1rem 0;
-    font-style: var(--varFont);
 }
 
 /*Buttons*/
@@ -159,7 +159,7 @@ main h2 {
 
 .general-button {
     padding: 1rem 3rem;
-    font-weight: bold;
+    font-weight: 400;
     font-size: 150%;
     background-color: rgb(32, 156, 227,50%) ;
 }
@@ -174,7 +174,6 @@ main h2 {
 
 .container-courses {
     font-size: 120%;
-    font-family: var(--varFont);
     display: grid;
     grid-template-columns: auto auto auto;
     justify-content: stretch;
@@ -205,7 +204,6 @@ footer {
     text-align: center;
     color: white;
     font-size: 100%;
-    font-family: var(--varFont);
 }
 
 footer > img {
@@ -327,7 +325,7 @@ footer > img {
 
     .general-button {
         padding: 5px;
-        font-weight: bold;
+        font-weight: 400;
         font-size: 150%;
         background-color: rgb(32, 156, 227,50%) ;
     }
@@ -339,15 +337,5 @@ footer > img {
     #mobile-tikal {
         width: 100px;
     }
-
-
-
-
-
-
-
-
-
-
 
 }
