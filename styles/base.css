@@ -11,13 +11,14 @@
     --varBackgroundMenu: #000000;
     --varBackgroundColor2: #66301d;
 
-    --varFont: "Inter", sans-serif;
+    --varFont: "Inter", "Poppins", sans-serif;;
 }
 
 * {
     margin: 0 auto;
     padding: 0;
     max-width: 1200px;
+    font-family: var(--varFont);
 }
 
 body {
