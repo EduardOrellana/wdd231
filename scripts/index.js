@@ -160,3 +160,12 @@ const wdd = document.getElementById("wdd");
 allCourses.addEventListener("click",displayAll);
 cse.addEventListener("click", filterCSE)
 wdd.addEventListener("click", filterWDD)
+
+
+//Load the page
+
+const buttonToRefresh = document.querySelector("#refresh");
+
+buttonToRefresh.addEventListener('click', () => {
+    location.reload();
+})

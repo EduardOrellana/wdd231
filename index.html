@@ -4,12 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Erick Orellana">
-    <meta name="description" content="W01 Assignment: Course Home Page">
+    <meta name="author" content="Erick Eduardo Orellana Umaña">
+    <meta name="description" content="Home page of the principal page for this 7 weeks.">
     <link rel="icon" href="images/guatemalaFlag.png" type="image/x-icon">
-    <title>WDD 231: Web Frontend Development I</title>
+    <title>WDD 231: Web Frontend Development I - Erick Orellana</title>
     <link href="styles/index-large.css" type="text/css" rel="stylesheet">
-    <link href="styles/index.css" type="text/css" rel="stylesheet">
     <script src="scripts/index.js" defer></script>
     <!--Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,10 +26,10 @@
     <button id="menu"></button>
     <nav id="navMenu">
         <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="#" id="refresh" class="active">Home</a></li>
             <li><a href="#">Chamber</a></li>
-            <li><a href="#">Github Profile</a></li>
-            <li><a href="https://www.linkedin.com/in/erick-eduardo-orellana-uma%C3%B1a-8297b1222">LinkedIn</a></li>
+            <li><a href="https://github.com/EduardOrellana/wdd231" target="_blank">Github Profile</a></li>
+            <li><a href="https://www.linkedin.com/in/erick-eduardo-orellana-uma%C3%B1a-8297b1222" target="_blank">LinkedIn</a></li>
         </ul>
     </nav>
     <main>
@@ -46,9 +45,8 @@
             <h2>Peten, Guatemala</h2>
             <figure id="tikal-container">
                 <picture id="tikal-img">
-                    <source srcset="images/tikal-large.webp" media="(min-width: 700px)">
                     <source id="mobile-tikal" srcset="images/tikal-mobilie-view.webp" media="(max-width: 699px)">
-                    <img src="images/tikal-large.webp" alt="Tikal" width="250" loading="lazy">
+                    <img src="images/tikal-large.webp" alt="Tikal" width="300" height="300" loading="lazy">
                 </picture>
                 <figcaption>Tikal, Peten</figcaption>
             </figure>
@@ -74,7 +72,7 @@
         </p>
         <p id="modified"></p>
         <hr>
-        <img src="images/guatemalaFlag.png" width="50" loading="lazy" alt="guatemalaFlag">
+        <img src="images/guatemalaFlag.webp" width="50" height="35" loading="lazy" alt="guatemalaFlag">
     </footer>
 </body>
 

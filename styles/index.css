@@ -28,7 +28,7 @@
 
     #navMenu {
         max-width: 640px;
-        background-color: var(--varBackgroundMenu);
+        background-color: var(--varBackgroundColor);
         display: flex;
         flex-direction: column;
         border-radius: 0 0 10px 10px;
@@ -85,7 +85,12 @@
     }
 
     #navMenu.open ul li:hover{
-        background-color: black;
+        background-color: var(--varBackgroundColor);
+        color: red;
+    }
+
+    .active {
+        color: red;
     }
 
 
