@@ -223,15 +223,6 @@ footer > img {
 
 @media screen and (max-width: 700px){
 
-    :root {
-
-        --varBackgroundColor: #174e70;
-        --varBackgroundMenu: #000000;
-        --varBackgroundColor2: #66301d;
-    
-        --varFont: "Inter", sans-serif;
-    }
-
     header{
         display: flex;
         justify-content: flex-start;
