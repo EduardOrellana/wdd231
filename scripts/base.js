@@ -110,7 +110,7 @@ function displayCourses(coursesObject){
             slot.setAttribute("class", "slot-courses");
 
             const coursesTitle = document.createElement("p");
-            coursesTitle.textContent = `${element.subject} ${element.number}`;
+            coursesTitle.textContent = `${element.subject} ${element.number} Credits: ${element.credits}`;
 
             //Display
             slot.appendChild(coursesTitle);
