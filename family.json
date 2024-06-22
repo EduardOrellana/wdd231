@@ -1,0 +1,18 @@
+{
+    "familyName" : "Familia Orellana",
+    "move_in_date" : "2023-01-01",
+    "number_of_members" : 2,
+    "visit_by_bishopric" : true,
+    "family_members" : [
+        {
+            "name" : "Erick Eduardo Orellana Umana",
+            "gender" : "male",
+            "birthday" : "2000-05-05"
+        },
+        {
+            "name" : "Jeimy Rubi Alvarado Mendez de Orellana",
+            "gender" : "female",
+            "birthday" : "2000-09-10"
+        }
+    ]
+}

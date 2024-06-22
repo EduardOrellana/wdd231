@@ -1,0 +1,121 @@
+:root {
+
+    --primaryColor: #ea9e8d;
+    --secondaryColor: #d64550;
+    --thirdColor: #daefb3;
+    --backgroundColor: #eef4d4;
+    --textColor: #1c2826;
+
+    --primaryFont: "Ubuntu", sans-serif;
+    --primaryFontWeight: 400;
+    --secondaryFontWeight: 500;
+    --fontBold: 700;
+    
+}
+
+
+* {
+    font-family: var(--primaryFont);
+    color: var(--textColor);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header {
+    max-width: 100%;
+    background-color: var(--backgroundColor);
+    padding-bottom: 15px;
+}
+
+.logo-commerce{
+    width: 15%;
+    border-radius: 5px;
+    border: 2px solid var(--secondaryColor);
+    margin: 2px;
+}
+
+#title{
+    font-size: 70%;
+    text-align: center;
+    margin-top: -15%;
+}
+
+/*Ham Button*/
+#menu {
+    font-size: 2.5rem;
+    border: 0;
+    background: none;
+    color: var(--textColor);
+    position: absolute;
+    right: 2px;
+    top: 0;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "X";
+}
+
+#navMenu.open a{
+    display: block;
+    font-weight: 400;
+}
+
+#navMenu {
+    max-width: 100%;
+    background-color: var(--secondColor);
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 0 10px 10px;
+}
+
+#navMenu ul {
+    list-style: none;
+    display: block;
+}
+
+#navMenu a {
+    display: none;
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 150%;
+    color: var(--forthColor);
+    margin-left: -10%;
+}
+
+#navMenu a:hover{
+    background-color: transparent;
+    color: var(--primaryColor);
+}
+
+
+
+/*Footer*/
+
+footer {
+    background-color: var(--backgroundColor);
+    font-size: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#social-media {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.social-medialogos {
+    width: 10%;
+    margin: 0 15px;
+}
+
+#footer-info {
+    margin-bottom: 20px;
+}
