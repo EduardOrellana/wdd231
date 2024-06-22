@@ -26,75 +26,8 @@ logoMain.addEventListener('click', () =>{
 
 //Get the data:
 
-// const data = '../data/members.json';
-const data = {
-    "directory": [
-        
-        {
-            "name": "Mcdonald's",
-            "address": "Street one, Av. P",
-            "phone_number": 50223606363,
-            "website_url": "https://mcdonalds.com.gt/",
-            "image": "images/mc.webp",
-            "membership_level": 3,
-            "type": "food"
-        },
-        {
-            "name": "Burger King",
-            "address": "Street two, Av. B",
-            "phone_number": 50222000000,
-            "website_url": "https://bk.gt/",
-            "image": "images/burger-king.webp",
-            "membership_level": 3,
-            "type": "food"
-        },
-        {
-            "name": "Little Ceaser's",
-            "address": "Central Park, Av. P",
-            "phone_number": 50241526398,
-            "website_url": "https://www.pizzapizza.com.gt/menu/",
-            "image": "images/little-ceasers.webp",
-            "membership_level": 2,
-            "type": "food"
-        },
-        {
-            "name": "Como en Casa",
-            "address": "The Joy 2 9-90, zone 1, SMP",
-            "phone_number": 5024158796,
-            "website_url": "##",
-            "image": "images/como-en-casa.webp",
-            "membership_level": 1,
-            "type": "food"
-        },
-        {
-            "name": "ERORELLA Full Stack and Business Intelligence",
-            "address": "3.t street zone 12, SMP",
-            "phone_number": 50555562439,
-            "website_url": "https://www.linkedin.com/in/erick-eduardo-orellana-uma%C3%B1a-8297b1222/",
-            "image": "images/erorella.webp",
-            "membership_level": 2,
-            "type": "Software Development & Business Services"
-        },
-        {
-            "name": "Functional Marriages & Happy Families",
-            "address": "First Avenue, central park House 3th.P",
-            "phone_number": 50258555554,
-            "website_url": "https://eduardorellana.github.io/wdd131/project/#",
-            "image": "images/family-services.webp",
-            "membership_level": 2,
-            "type": "Family Services"
-        },
-        {
-            "name": "Librano",
-            "address": "Street one, Av. T",
-            "phone_number": 50278966321,
-            "website_url": "##",
-            "image": "images/librano.webp",
-            "membership_level": 1,
-            "type": "Library"
-        }
-    ]
-}
+const data = 'https://raw.githubusercontent.com/EduardOrellana/wdd231/main/chamber/data/members.json';
+
 
 const directory = document.querySelector('#directory');
 
@@ -128,6 +61,7 @@ const displayDirectory = (companies) => {
         let address = document.createElement('p');
         let website = document.createElement('p');
         let kind = document.createElement('p');
+        let space = document.createElement('br')
 
         //Content
 
@@ -136,7 +70,7 @@ const displayDirectory = (companies) => {
         portrait.setAttribute("src", element.image);
         portrait.setAttribute("alt", "logo business");
         portrait.setAttribute("loading", "lazy");
-        portrait.setAttribute("width", "300");
+        portrait.setAttribute("width", "150");
 
         number.textContent = `${element.phone_number}`;
         address.textContent = `${element.address}`;
@@ -150,6 +84,9 @@ const displayDirectory = (companies) => {
         card.appendChild(number);
         card.appendChild(kind);
         card.append(website);
+        card.appendChild(space)
+        card.appendChild(space)
+        card.appendChild(space)
 
         //addint into the directory section:
         directory.appendChild(card)

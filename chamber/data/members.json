@@ -1,6 +1,6 @@
 {
     "directory": [
-        
+
         {
             "name": "Mcdonald's",
             "address": "Street one, Av. P",
@@ -38,7 +38,7 @@
             "type": "food"
         },
         {
-            "name": "ERORELLA Full Stack and Business Intelligence",
+            "name": "ERORELLA",
             "address": "3.t street zone 12, SMP",
             "phone_number": 50555562439,
             "website_url": "https://www.linkedin.com/in/erick-eduardo-orellana-uma%C3%B1a-8297b1222/",
@@ -47,7 +47,7 @@
             "type": "Software Development & Business Services"
         },
         {
-            "name": "Functional Marriages & Happy Families",
+            "name": "Functional Marriages",
             "address": "First Avenue, central park House 3th.P",
             "phone_number": 50258555554,
             "website_url": "https://eduardorellana.github.io/wdd131/project/#",
