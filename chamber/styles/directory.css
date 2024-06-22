@@ -16,7 +16,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-display: swap;
 }
 
 body {
@@ -41,6 +40,7 @@ header {
     border-radius: 5px;
     border: 2px solid var(--secondaryColor);
     margin: 2px;
+    cursor: pointer;
 }
 
 #title {
