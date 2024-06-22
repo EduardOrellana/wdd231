@@ -59,7 +59,7 @@ const displayDirectory = (companies) => {
         let portrait = document.createElement('img');
         let number = document.createElement('p');
         let address = document.createElement('p');
-        let website = document.createElement('p');
+        let website = document.createElement('a');
         let kind = document.createElement('p');
         let space = document.createElement('br')
 
@@ -71,10 +71,14 @@ const displayDirectory = (companies) => {
         portrait.setAttribute("alt", "logo business");
         portrait.setAttribute("loading", "lazy");
         portrait.setAttribute("width", "150");
+        portrait.setAttribute("height", "150");
+
+        website.setAttribute('href', element.website_url)
+        website.setAttribute('target', '_blank')
+        website.textContent = "Go to Webstie"
 
         number.textContent = `${element.phone_number}`;
         address.textContent = `${element.address}`;
-        website.textContent = `${element.website_url}`;
         kind.textContent = `Industry: ${element.type}`;
 
 
@@ -83,8 +87,7 @@ const displayDirectory = (companies) => {
         card.appendChild(address);
         card.appendChild(number);
         card.appendChild(kind);
-        card.append(website);
-        card.appendChild(space)
+        card.appendChild(website);
         card.appendChild(space)
         card.appendChild(space)
 
@@ -95,4 +98,25 @@ const displayDirectory = (companies) => {
     });
 }
 
+
 getDataDirectory();
+
+
+//Butons----------------------------------------------------------------------------------------------------
+const gridbutton = document.querySelector("#grid");
+const listbutton = document.querySelector("#list");
+
+// The following code could be written cleaner. How? We may have to simplfiy our HTMl and think about a default view.
+
+gridbutton.addEventListener("click", () => {
+	// example using arrow function
+	directory.classList.add("grid");
+	directory.classList.remove("list");
+});
+
+listbutton.addEventListener("click", showList); // example using defined function
+
+function showList() {
+	directory.classList.add("list");
+	directory.classList.remove("grid");
+}
