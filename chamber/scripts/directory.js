@@ -76,7 +76,7 @@ const displayDirectory = (companies) => {
 
         // website.setAttribute('href', element.website_url)
         // website.setAttribute('target', '_blank')
-        website.textContent = `Web URL: ${element.website_url}`
+        website.textContent = `Web URL: ${element.website_url}`;
         number.textContent = `${element.phone_number}`;
         address.textContent = `${element.address}`;
         kind.textContent = `Industry: ${element.type}`;
