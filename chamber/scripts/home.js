@@ -1,6 +1,5 @@
 import Footer_and_HamBurger from "./base.js";
 
-
 const principalDynamic = new Footer_and_HamBurger();
 
 principalDynamic.setfooter();
@@ -14,6 +13,85 @@ document.addEventListener("DOMContentLoaded", () => {
 //Three Business
 const data = 'https://raw.githubusercontent.com/EduardOrellana/wdd231/main/chamber/data/members.json';
 
+//API Weather----------------------------------------------------------------------------------------------
+const weatherContainer = document.querySelector('#weather');
+const weatherIcon = document.querySelector('#icon-weather');
+
+// 14.529898598648922, -90.59526334935519
+
+let lat = 14.5269;
+let lon = -90.5875;
+
+// let loc = 6.64;
+// let lat = 49.75;
+
+const url = `//api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=8aa0b13698894c5f56ccba0bd220bcab`;
+
+async function apiFetch() {
+    try {
+        const response = await fetch(url);
+        if (response.ok) {
+            console.log(response.ok);
+            const data = await response.json();
+            console.log(data);
+            displayResultsWeather(data);
+        }
+        else {
+            throw Error(await response.text());
+        }
+    }
+    catch (error) {
+        console.log(error);
+    }
+}
+
+apiFetch();
+
+function displayResultsWeather(data) {
+    //URL of the Icon
+    const iconURL = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+    weatherIcon.setAttribute('src', iconURL);
+    weatherIcon.setAttribute('alt', 'Icon');
+
+    //List with the weather information-----------------------------------------------------------------------
+    const grades = document.createElement('ul');
+    const kindWeather = document.createElement('ul');
+    const high = document.createElement('ul');
+    const low = document.createElement('ul');
+    const humidity = document.createElement('ul');
+    const sunrise = document.createElement('ul');
+    const sunset = document.createElement('ul');
+
+    //Set and write the values---------------------------------------------------------------
+    grades.textContent = `${Math.round(data.main.temp)}° F`;
+    kindWeather.textContent = data.weather[0].description;
+    high.textContent = `High: ${Math.round(data.main.temp_max)}°`;
+    low.textContent = `Low: ${Math.round(data.main.temp_min)}°`;
+    humidity.textContent = `Humidity: ${data.main.humidity}`;
+    sunrise.textContent = `Sunrise: ${timing(data.sys.sunrise)}`;
+    sunset.textContent = `Sunset: ${timing(data.sys.sunset)}`;
+
+    weatherContainer.appendChild(grades);
+    weatherContainer.appendChild(kindWeather);
+    weatherContainer.appendChild(high);
+    weatherContainer.appendChild(low);
+    weatherContainer.appendChild(humidity);
+    weatherContainer.appendChild(sunrise);
+    weatherContainer.appendChild(sunset);
+}
+
+let timing = (sunrise_or_sunset) => {
+    const date = new Date(sunrise_or_sunset *1000);
+    const hrs = date.getHours();
+    const minutes = date.getMinutes();
+    const seconds = date.getSeconds();
+
+    const formatting = `${hrs.toString().padStart(2, '0')}:${minutes.toString().padStart(2,'0')}:${seconds.toString().padStart(2,'0')}`;
+
+    console.log(`the time is: ${formatting}`);
+
+    return formatting
+}
 
 const directory = document.querySelector('#contacts');
 

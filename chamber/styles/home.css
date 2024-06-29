@@ -145,7 +145,7 @@ body.loaded #hero-image, body.loaded #hero-button {
 #hero-button {
     position: absolute;
     z-index: 2;
-    bottom: 25rem;
+    bottom: 20rem;
     right: 5rem;
     padding: 2rem 3rem;
     font-size: 30px;
@@ -349,6 +349,13 @@ table tr td{
         transition: opacity 1s ease-out, transform 1s ease-out;
     }
 
+
+    /*Weather Section and others*/
+    #container-one {
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+    }
 
     /*Contacts Section*/
     #contacts {
