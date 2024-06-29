@@ -357,9 +357,12 @@ table tr td{
         align-content: center;
     }
 
+    table {
+        width: 500px;
+    }
     /*Contacts Section*/
     #contacts {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 }
