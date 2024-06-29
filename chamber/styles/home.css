@@ -130,7 +130,7 @@ footer {
 
 /*Main Design*/
 
-#hero-image {
+.hero-image {
     max-width: 100%;
     height: 500px;
     /* opacity: 0;
@@ -343,7 +343,7 @@ table tr td{
         background-color: var(--secondaryColor);
     }
 
-    #hero-image {
+    .hero-image {
         max-width: 100%;
         height: 100%;
         /* opacity: 0;
