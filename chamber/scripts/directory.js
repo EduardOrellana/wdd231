@@ -59,8 +59,8 @@ const displayDirectory = (companies) => {
         let portrait = document.createElement('img');
         let number = document.createElement('p');
         let address = document.createElement('p');
-        // let website = document.createElement('a');
-        let website = document.createElement('p');
+        let website = document.createElement('a');
+        // let website = document.createElement('p');
         let kind = document.createElement('p');
         let space = document.createElement('br')
 
@@ -74,9 +74,9 @@ const displayDirectory = (companies) => {
         portrait.setAttribute("width", "150");
         portrait.setAttribute("height", "150");
 
-        // website.setAttribute('href', element.website_url)
-        // website.setAttribute('target', '_blank')
-        website.textContent = `Web URL: ${element.website_url}`;
+        website.setAttribute('href', element.website_url)
+        website.setAttribute('target', '_blank')
+        website.textContent = `Web Site`;
         number.textContent = `${element.phone_number}`;
         address.textContent = `${element.address}`;
         kind.textContent = `Industry: ${element.type}`;
@@ -91,7 +91,7 @@ const displayDirectory = (companies) => {
         card.appendChild(space)
         card.appendChild(space)
 
-        //addint into the directory section:
+        //adding into the directory section:
         directory.appendChild(card)
 
 

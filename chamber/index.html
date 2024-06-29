@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Erick Orellana">
-    <meta name="description" content="Directory of the Chamber Commerce of Petapa, Guatemala, Guatemala">
+    <meta name="description" content="Home Page of the Chamber Commerce of Petapa, Guatemala, Guatemala">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <title>Directory of Petapa Commerce - WDD231 Web Frontend Development I</title>
-    <link href="styles/directory.css" type="text/css" rel="stylesheet">
-    <script src="scripts/directory.js" defer></script>
+    <title>Home Page Chamber of Petapa Commerce - WDD231 Web Frontend Development I</title>
+    <link href="styles/home.css" type="text/css" rel="stylesheet">
+    <script type="module" src="scripts/home.js"></script>
 
     <!--Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,21 +35,81 @@
         <button id="menu"></button>
         <nav id="navMenu">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
                 <li><a href="#">Join</a></li>
                 <li><a href="#">Discover</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <div id="buttons">
-            <button id="grid">⏹️Grid</button>
-            <button id="list">📄List</button>
+        <div id="container-one">
+        <section class="hero">
+            <picture id="hero-image">
+                <source media="(max-width: 800px)" srcset="images/home-page/lake.webp">
+                <img src="images/home-page/flores.webp" alt="Flores, Petapa" id="hero-image" loading="lazy" width="1500" height="1000">
+            </picture>
+            <button id="hero-button">Join Us</button>
+        </section>
+        
+        <h2>Home</h2>
+
+        <section class="events">
+            <table class="events-table">
+                <tr>
+                    <th>
+                        <h3>Events</h3>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="events-list">
+                            placeholder
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+
+        <section class="current-wather">
+            <table class="weather-table">
+                <tr>
+                    <th>
+                        <h3>Current Weather</h3>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="wather">
+                            placeholder
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="weather-forecast-section">
+            <table class="weather-forecast-table">
+                <tr>
+                    <th>
+                        <h3>Weather Forecast</h3>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="weather-forecast">
+                            placeholder
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </section>
         </div>
 
-        <section id="directory" class="grid">
-            
+        <section id="contacts">
+
         </section>
+
     </main>
     <footer>
         <section id="information">

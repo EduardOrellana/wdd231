@@ -128,98 +128,92 @@ footer {
     margin-top: 20px;
 }
 
-/* Main */
-main {
-    display: block;
-    justify-content: center;
-    align-items: center;
+/*Main Design*/
+
+#hero-image {
+    max-width: 100%;
+    height: 500px;
+    opacity: 0;
+    transform: scale(0.10);
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-/*Grid And List*/
-.grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 80%;
+body.loaded #hero-image, body.loaded #hero-button {
+    opacity: 1;
+    transform: scale(1);
 }
-
-.grid section {
-    margin-bottom: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    width: 100%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: block;
-}
-
-.grid section img {
-    width: 100%;
-    max-width: 150px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 5px 10px 5px var(--primaryColor);
-    position: relative;
-    display: block;
-    margin: 0 auto;
-}
-
-.grid section h2 {
-    text-align: center;
-    margin-top: 10px;
-}
-
-.grid > section > a {
-    text-align: center;
-}
-
-.grid section p{
-    text-align: center;
-}
-
-/*Buttons*/
-#buttons {
-    padding: 20px;
+#hero-button {
+    position: absolute;
+    z-index: 2;
+    bottom: 25rem;
+    right: 5rem;
+    padding: 2rem 3rem;
+    font-size: 30px;
     background-color: var(--primaryColor);
+    font-family: var(--primaryFont);
+    color: var(--textColor);
+    font-weight: var(--fontBold);
+    border-radius: 10px;
+
+    opacity: 0;
+    transform: scale(0.10);
+    transition: opacity 1s ease-out, transform 1s ease-o
+}
+
+#hero-button:hover {
+    background-color: var(--thirdColor);
+}
+
+/*Table Events*/
+table {
+    width: 100%;
+}
+
+table th {
+    background-color: var(--thirdColor);
+    padding: 10px 0;
+    margin: 0;
+    border: 0;
+    border: 3px solid var(--textColor);
+    border-radius: 15px;
+}
+
+table tr td{
     text-align: center;
 }
 
-#grid,
-#list {
-    padding: 20px;
-    font-family: var(--primaryFont);
-    font-weight: var(--fontBold);
-    font-size: 120%;
-    border: 2px solid var(--thirdColor);
-}
+/*sections business Main*/
 
-.list {
-    display: flex;
-    flex-direction: column;
-}
-
-.list section {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    margin: 0;
-    padding: 0.25rem;
-    font-size: small;
-}
-
-.list section > * {
-    margin: 0 1rem;
-}
-
-.list section img {
-    display: none;
-}
-
-.list section h3 {
-    font-size: 80%;
-}
-
-.list section:nth-child(even) {
+#contacts {
+    margin: 0 auto;
     background-color: var(--thirdColor);
+    margin: 1rem;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 10px 10px 15px var(--primaryColor);
+    border: 5px  solid var(--textColor);
+}
+
+#contacts > div {
+    margin: 2rem 0;
+}
+
+#contacts > div > h3 {
+    font-family: var(--primaryFont);
+    font-size: 150%;
+    margin: 2rem 0;
+}
+
+#subcard2 p {
+    font-family: var(--primaryFont);
+    font-weight: bold;
+    font-size: 110%;
+}
+
+#subcard-business {
+    display: flex;
+    justify-content: space-between;
 }
 
 /*Larges Views*/
@@ -321,14 +315,44 @@ main {
     #information {
         margin-top: 0;
     }
+    
 
-    /*MAIN*/
-    .grid{
-        display: grid;
-        grid-template-columns : repeat(auto-fit, minmax(500px, 1fr));
-        grid-gap: 5px;
-        align-items: center;
-
+    /*Main*/
+    #hero-button {
+        position: absolute;
+        bottom: 1rem;
+        right: 15rem;
+        z-index: 2;
+        cursor: pointer;
+        padding: 2.5rem 6rem;
+        font-size: 50px;
+        background-color: var(--primaryColor);
+        font-family: var(--primaryFont);
+        color: var(--textColor);
+        font-weight: var(--fontBold);
+        border-radius: 10px;
+    
+        opacity: 0;
+        transform: scale(0.10);
+        transition: opacity 1s ease-out, transform 1s ease-o
+    }
+    
+    #hero-button:hover {
+        background-color: var(--secondaryColor);
     }
 
+    #hero-image {
+        max-width: 100%;
+        height: 100%;
+        opacity: 0;
+        transform: scale(0.10);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+
+
+    /*Contacts Section*/
+    #contacts {
+        display: flex;
+        justify-content: space-between;
+    }
 }
