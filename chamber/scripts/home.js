@@ -7,9 +7,11 @@ principalDynamic.refreshPage();
 principalDynamic.setHambutton();
 
 
-document.addEventListener("DOMContentLoaded", () => {
-    document.body.classList.add('loaded');
-})
+// document.addEventListener("DOMContentLoaded", () => {
+//     document.body.classList.add('loaded');
+// })
+
+
 //Three Business
 const data = 'https://raw.githubusercontent.com/EduardOrellana/wdd231/main/chamber/data/members.json';
 
@@ -21,9 +23,6 @@ const weatherIcon = document.querySelector('#icon-weather');
 
 let lat = 14.5269;
 let lon = -90.5875;
-
-// let loc = 6.64;
-// let lat = 49.75;
 
 const url = `//api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=8aa0b13698894c5f56ccba0bd220bcab`;
 

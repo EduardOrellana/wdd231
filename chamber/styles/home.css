@@ -133,15 +133,16 @@ footer {
 #hero-image {
     max-width: 100%;
     height: 500px;
-    opacity: 0;
+    /* opacity: 0;
     transform: scale(0.10);
-    transition: opacity 1s ease-out, transform 1s ease-out;
+    transition: opacity 1s ease-out, transform 1s ease-out; */
 }
 
-body.loaded #hero-image, body.loaded #hero-button {
+/* body.loaded #hero-image, body.loaded #hero-button {
     opacity: 1;
     transform: scale(1);
-}
+} */
+
 #hero-button {
     position: absolute;
     z-index: 2;
@@ -154,10 +155,10 @@ body.loaded #hero-image, body.loaded #hero-button {
     color: var(--textColor);
     font-weight: var(--fontBold);
     border-radius: 10px;
-
+/* 
     opacity: 0;
     transform: scale(0.10);
-    transition: opacity 1s ease-out, transform 1s ease-o
+    transition: opacity 1s ease-out, transform 1s ease-o */
 }
 
 #hero-button:hover {
@@ -176,6 +177,7 @@ table th {
     border: 0;
     border: 3px solid var(--textColor);
     border-radius: 15px;
+    font-size: 150%;
 }
 
 table tr td{
@@ -331,10 +333,10 @@ table tr td{
         color: var(--textColor);
         font-weight: var(--fontBold);
         border-radius: 10px;
-    
+/*     
         opacity: 0;
         transform: scale(0.10);
-        transition: opacity 1s ease-out, transform 1s ease-o
+        transition: opacity 1s ease-out, transform 1s ease-o */
     }
     
     #hero-button:hover {
@@ -344,9 +346,9 @@ table tr td{
     #hero-image {
         max-width: 100%;
         height: 100%;
-        opacity: 0;
+        /* opacity: 0;
         transform: scale(0.10);
-        transition: opacity 1s ease-out, transform 1s ease-out;
+        transition: opacity 1s ease-out, transform 1s ease-out; */
     }
 
 
