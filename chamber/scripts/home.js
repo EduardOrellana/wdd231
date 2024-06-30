@@ -16,27 +16,38 @@ principalDynamic.setHambutton();
 const data = 'https://raw.githubusercontent.com/EduardOrellana/wdd231/main/chamber/data/members.json';
 
 //API Weather----------------------------------------------------------------------------------------------
-const weatherContainer = document.querySelector('#weather');
+const weatherContainer = document.querySelector('#weather-list');
 const weatherIcon = document.querySelector('#icon-weather');
 
 // 14.529898598648922, -90.59526334935519
 
 let lat = 14.5269;
 let lon = -90.5875;
+let apiKey = '8aa0b13698894c5f56ccba0bd220bcab';
 
-const url = `//api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=8aa0b13698894c5f56ccba0bd220bcab`;
+const url = `//api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`;
+const urlForecast = `//api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}`
+const placeForecast = document.querySelector('#weather-forecast');
+const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
 async function apiFetch() {
     try {
         const response = await fetch(url);
-        if (response.ok) {
+        const response2 = await fetch(urlForecast);
+        if (response.ok && response2.ok) {
             console.log(response.ok);
             const data = await response.json();
+            const data2 = await response2.json();
+
             console.log(data);
+            console.log(data2);
+
             displayResultsWeather(data);
+            displayForecastWeather(data2)
         }
         else {
             throw Error(await response.text());
+            throw Error(await response2.text());
         }
     }
     catch (error) {
@@ -53,13 +64,13 @@ function displayResultsWeather(data) {
     weatherIcon.setAttribute('alt', 'Icon');
 
     //List with the weather information-----------------------------------------------------------------------
-    const grades = document.createElement('ul');
-    const kindWeather = document.createElement('ul');
-    const high = document.createElement('ul');
-    const low = document.createElement('ul');
-    const humidity = document.createElement('ul');
-    const sunrise = document.createElement('ul');
-    const sunset = document.createElement('ul');
+    const grades = document.createElement('li');
+    const kindWeather = document.createElement('li');
+    const high = document.createElement('li');
+    const low = document.createElement('li');
+    const humidity = document.createElement('li');
+    const sunrise = document.createElement('li');
+    const sunset = document.createElement('li');
 
     //Set and write the values---------------------------------------------------------------
     grades.textContent = `${Math.round(data.main.temp)}° F`;
@@ -80,17 +91,72 @@ function displayResultsWeather(data) {
 }
 
 let timing = (sunrise_or_sunset) => {
-    const date = new Date(sunrise_or_sunset *1000);
+    const date = new Date(sunrise_or_sunset * 1000);
     const hrs = date.getHours();
     const minutes = date.getMinutes();
     const seconds = date.getSeconds();
 
     const formatting = `${hrs.toString().padStart(2, '0')}:${minutes.toString().padStart(2,'0')}:${seconds.toString().padStart(2,'0')}`;
-
-    console.log(`the time is: ${formatting}`);
-
     return formatting
 }
+
+//Weather Fore Cast-------------------------------------------------------------------------------------
+
+// const urlForecast = `//api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}`
+// const placeForecast = document.querySelector('#weather-forecast');
+// const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+// async function forecastAPIfetch() {
+//     try {
+//         const resposeForecast = await fetch(urlForecast);
+//         if (resposeForecast.ok) {
+//             console.log(resposeForecast.ok);
+//             const dataForecast = await resposeForecast.json();
+//             console.log(dataForecast);
+//             displayForecastWeather(dataForecast);
+//         }
+//         else {
+//             throw Error(await resposeForecast.text());
+//         }
+//     }
+//     catch (error) {
+//         console.log(error);
+//     }
+// }
+
+function displayForecastWeather(data) {
+    const tomorrowTemp = document.createElement('p');
+    const tempTomorrow = converterTem(data.list[4].main.temp)
+    const getDay = selectDay(data.list[4].dt);
+    tomorrowTemp.textContent = `${getDay}: ${tempTomorrow}`;
+    placeForecast.appendChild(tomorrowTemp);
+
+    const dayAfterTomorrow = document.createElement('p');
+    const temp2 = converterTem(data.list[12].main.temp)
+    const getDay2 = selectDay(data.list[12].dt);
+    dayAfterTomorrow.textContent = `${getDay2}: ${temp2}`;
+    placeForecast.appendChild(dayAfterTomorrow);
+
+    const dayAfterTomorro2 = document.createElement('p');
+    const temp3 = converterTem(data.list[20].main.temp)
+    const getDay3 = selectDay(data.list[20].dt);
+    dayAfterTomorro2.textContent = `${getDay3}: ${temp3}`;
+    placeForecast.appendChild(dayAfterTomorro2);
+
+}
+
+let converterTem = (value) => {
+    let result = (value - 273.15) * 9/5 + 32;
+    return `${Math.round(result)}  ℉`;
+}
+
+let selectDay = (value) => {
+    const day = new Date(value * 1000);
+    const dayText = daysOfWeek[day.getDay()];
+    return dayText;
+}
+
+// forecastAPIfetch();
 
 const directory = document.querySelector('#contacts');
 
