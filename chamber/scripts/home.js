@@ -17,6 +17,7 @@ const data = 'https://raw.githubusercontent.com/EduardOrellana/wdd231/main/chamb
 
 //API Weather----------------------------------------------------------------------------------------------
 const weatherContainer = document.querySelector('#weather-list');
+const placeForecast = document.querySelector('#weather-forecast');
 const weatherIcon = document.querySelector('#icon-weather');
 
 // 14.529898598648922, -90.59526334935519
@@ -27,7 +28,7 @@ let apiKey = '8aa0b13698894c5f56ccba0bd220bcab';
 
 const url = `//api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`;
 const urlForecast = `//api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}`
-const placeForecast = document.querySelector('#weather-forecast');
+
 const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
 async function apiFetch() {
@@ -54,8 +55,6 @@ async function apiFetch() {
         console.log(error);
     }
 }
-
-apiFetch();
 
 function displayResultsWeather(data) {
     //URL of the Icon
@@ -100,30 +99,6 @@ let timing = (sunrise_or_sunset) => {
     return formatting
 }
 
-//Weather Fore Cast-------------------------------------------------------------------------------------
-
-// const urlForecast = `//api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}`
-// const placeForecast = document.querySelector('#weather-forecast');
-// const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-
-// async function forecastAPIfetch() {
-//     try {
-//         const resposeForecast = await fetch(urlForecast);
-//         if (resposeForecast.ok) {
-//             console.log(resposeForecast.ok);
-//             const dataForecast = await resposeForecast.json();
-//             console.log(dataForecast);
-//             displayForecastWeather(dataForecast);
-//         }
-//         else {
-//             throw Error(await resposeForecast.text());
-//         }
-//     }
-//     catch (error) {
-//         console.log(error);
-//     }
-// }
-
 function displayForecastWeather(data) {
     const tomorrowTemp = document.createElement('p');
     const tempTomorrow = converterTem(data.list[4].main.temp)
@@ -156,7 +131,7 @@ let selectDay = (value) => {
     return dayText;
 }
 
-// forecastAPIfetch();
+apiFetch();
 
 const directory = document.querySelector('#contacts');
 
