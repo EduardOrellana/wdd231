@@ -99,6 +99,11 @@ lastModified.textContent = `Last modification: ${document.lastModified}`;
 //Display Courses
 
 const secCourses = document.querySelector(".container-courses");
+const courseDetails = document.getElementById('course-details')
+
+courseDetails.addEventListener('close', () => {
+    courseDetails.classList.remove('open');
+})
 
 function displayCourses(coursesObject){
     //This Function will be running through the courses
@@ -122,6 +127,12 @@ function displayCourses(coursesObject){
             }else{
                 coursesTitle.style.backgroundColor = "#66301d";
             }
+        
+            slot.addEventListener('click', () =>{
+                displayCourseDetails(element);
+            })
+        
+        
         });
 }
 
@@ -169,3 +180,27 @@ const buttonToRefresh = document.querySelector("#refresh");
 buttonToRefresh.addEventListener('click', () => {
     location.reload();
 })
+
+//Modules----------------------------------------------------------------------------------------------
+;
+
+function displayCourseDetails(course) {
+    courseDetails.innerHTML = '';
+    courseDetails.innerHTML = `
+    <button id="closeModal">❌</button>
+    <h2>${course.subject} ${course.number}</h2>
+    <h3>${course.title}</h3>
+    <p><strong>Credits</strong>: ${course.credits}</p>
+    <p><strong>Certificate</strong>: ${course.certificate}</p>
+    <p>${course.description}</p>
+    <p><strong>Techologies</strong>: ${course.technology.join(', ')}</p>
+    `;
+    courseDetails.showModal();
+    courseDetails.classList.add('open');
+
+
+    const closeModal = document.getElementById('closeModal');
+    closeModal.addEventListener('click', () => {
+        courseDetails.close();
+    })
+}
