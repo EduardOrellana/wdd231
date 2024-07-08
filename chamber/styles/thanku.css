@@ -134,62 +134,26 @@ main {
     position: relative;
     height: 100%;
     width: 100%;
+    color: white;
+    padding: 5rem;
 }
 
-/*Form Desing*/
-.required::before {
-    content: "*";
-    color: red;
-}
-
-#form {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    margin: 0 auto;
-    align-content: center;
-}
-
-form {
-    background-color: var(--thirdColor);
-    padding: 1rem;
-    border-radius: 15px;
-}
-
-.form1 fieldset {
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    background-color: var(--backgroundColor);
-    border-radius: 15px;
-}
-
-.form1 fieldset label,
-.form1 fieldset input {
-    padding: 1rem;
-    font-family: var(--primaryFont);
-}
-
-#description-business {
-    width: 100%;
-    height: 10rem;
-    padding: 0.5rem;
-}
-
-form fieldset legend {
+#thanks-section *{
     text-align: center;
-    color: var(--textColor);
-    font-size: 110%;
-    font-weight: bold;
+    font-weight: 140%;
+    color: white;
+    z-index: 2;
 }
 
-#button-submitt {
-    width: 10rem;
-    height: 6rem;
+#thanks-section {
+    border-radius: 25px;
+    border: 4px solid black;
+    background-color: #d64550;
     padding: 1rem;
-    margin: 1rem;
-    text-align: center;
-    font-size: 110%;
+}
+
+#list-info{
+    list-style: none;
 }
 
 /*Video Desing*/
@@ -204,67 +168,6 @@ form fieldset legend {
     opacity: 0.9; 
     object-fit: cover; 
     margin: 0;
-}
-
-/*Desing of the Membership Levels*/
-#title-memberships {
-    text-align: center;
-    margin: 1rem;
-}
-
-#details-memberships {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin: 1rem 1rem;
-    gap: .5rem;
-}
-
-.badges {
-    cursor: pointer;
-    transition: all 1s;
-    transition-delay: 0.1s;
-}
-
-.badges:hover {
-    transform: scale(1.3) rotate(360deg);
-    box-shadow: 0 0 15px var(--primaryColor);
-}
-
-/*Dialog */
-#dialog-membership {
-    border: 1px solid var(--textColor);
-    border-radius: .25rem;
-    padding: 1rem;
-    background-color: white;
-    box-shadow: 0 0 15px var(--secondaryColor);
-    width: 90%;
-    max-width: 500px;
-    margin: 5rem auto;
-    opacity: 0;
-    transform: scale(0);
-    transition: opacity 1s ease, transform 1s ease;
-}
-
-#dialog-membership.open {
-    opacity: 1;
-    transform: scale(1);
-}
-
-::backdrop {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-#dialog-membership button {
-    position: absolute;
-    top: 23px;
-    right: 23px;
-    padding: .5rem 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-#closeModal {
-    cursor: pointer;
 }
 
 /*Larges Views*/
@@ -375,58 +278,6 @@ form fieldset legend {
         height: 100%;
     }
     
-    /*Form Desing*/
-    .required::before {
-        content: "*";
-        color: red;
-    }
-    
-    #form {
-        position: relative;
-        width: 60%;
-        margin: 0 auto;
-        background-color: var(--thirdColor);
-        padding: 1rem;
-        border: solid 5px var(--secondaryColor);
-        border-radius: 15px;
-        z-index: 1;
-    }
-    
-    .form1 fieldset {
-        padding: 3rem;
-        padding-top: 1rem;
-        display: flex;
-        flex-direction: column;
-        background-color: var(--backgroundColor);
-        border-radius: 15px;
-    }
-    
-    .form1 fieldset label,
-    .form1 fieldset input {
-        padding: 1rem;
-        font-family: var(--primaryFont);
-    }
-    
-    #description-business {
-        width: 100%;
-        height: 10rem;
-        padding: 0.5rem;
-    }
-    
-    form fieldset legend {
-        text-align: center;
-        color: var(--textColor);
-        font-size: 150%;
-        font-weight: bold;
-    }
-    
-    #button-submitt {
-        width: 10rem;
-        height: 6rem;
-        padding: 1rem;
-        margin: 1rem;
-    }
-    
     /*Video Desing*/
     
     #myHeroVideo {
@@ -440,6 +291,4 @@ form fieldset legend {
         object-fit: cover; 
         margin: 0;
     }
-
-
 }
