@@ -22,17 +22,16 @@ console.log(formData);
 function show(word) {
     let result = '';
     console.log(word);
-    
+
     formData.forEach((element) => {
         console.log(element);
-        if (element.startsWith(word)){
-            result = element.split('=');
-            result = result[1].replace('+', ' '); //replace the + sign
-        } //end of the if
-    })
-    return(result);
+        if (element.startsWith(word)) {
+            result = element.split('=')[1];
+            result = decodeURIComponent(result).replace(/\+/g, ' '); // Decode and replace the + sign
+        }
+    });
+    return result;
 }
-
 function date(word) {
     let result = '';
     let end = '';
@@ -43,7 +42,7 @@ function date(word) {
         if (element.startsWith(word)) {
             result = element.split('=')[1];
             result = decodeURIComponent(result);
-            end = result.replace('+', ' ');
+            end = result.replace(/\+/g, ' ');
             console.log(end);
         } // end of the if
     });
@@ -70,7 +69,16 @@ container.innerHTML = `
     <ul id="list-info">
         <li>First Name: ${show('first')}</li>
         <li>Last Name: ${show('last')}</li>
+        <li>Number: ${show('phone')}</li>
         <li>Email: ${email('email')}</li>
+        <li>Business: ${show('business')} </li>
+        <li>Business Name: ${show('organizational')} </li>
     </ul>
-
+    <br>
+    <br>
+    <p><strong>Description:</strong> ${show('description')}</p>
+    <br>
+    <p><strong>Membership Category:</strong> ${show('membership')}</p>
+    <br>
+    <p><strong>Date:</strong> ${date('timestamp')}</p>
 `;
