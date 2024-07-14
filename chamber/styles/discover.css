@@ -130,6 +130,105 @@ footer {
 }
 
 /*Main Design*/
+
+@keyframes animationMainPhoto {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.03);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes barAnimation2 {
+    0% {
+        transform: translateX(-500px);
+    }
+
+    50%{
+        transform: translateX(500px);
+    }
+
+    100% {
+        transform: translateX(-500px);
+    }
+}
+
+@keyframes barAnimation1 {
+    0% {
+        transform: translateX(-300px);
+    }
+
+    100% {
+        transform: translateX(300px);
+    }
+}
+
+main {
+    max-width: 100%;
+    text-align: center;
+    background-color: var(--primaryColor);
+    border: 5px solid var(--textColor);
+    border-radius: 5px;
+    padding: 3rem 1rem;
+    font-family: var(--primaryFont);
+    font-weight: bold;
+    font-size: 110%;
+}
+
+main h2, main h3 {
+    font-weight: 900;
+    font-size: 150%;
+    padding: 1rem 0;
+    background-color: #daefb3;
+    margin: 1rem -0.5rem;
+    border-radius: 15px;
+}
+
+#founder figure img {
+    width: 100%;
+    border-radius: 30%;
+    box-shadow: 0 0 10px var(--thirdColor);
+    margin: 1rem auto;
+    animation: animationMainPhoto 2s ease-in-out infinite;
+}
+
+#calendar iframe{
+    width: 100%;
+    padding: 5px;
+    margin: 1rem auto;
+    border: 10px solid var(--thirdColor);
+}
+
+hr {
+    width: 40%;
+    margin: 1rem auto;
+    animation: barAnimation 5s infinite
+}
+
+.collage img {
+    width: 100%;
+    border: 5px solid var(--textColor);
+    border-radius: 15px;
+    box-shadow: 0 0 5px var(--textColor);
+}
+
+.fig-images > figcaption{
+    padding: 1rem;
+}
+
+#welcome p {
+    animation: barAnimation 10s infinite;
+    font-size: 200%;
+    box-shadow: 0 0 5px var(--textColor);
+}
+
+
 /*Larges Views*/
 @media screen and (min-width: 821px) {
 
@@ -232,7 +331,32 @@ footer {
     
     /*Main*/
 
-    
+    #container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        gap: 5px;
+    }
 
+    hr {
+        display: none;
+    }
 
+    #founder figure img,
+    .collage img {
+        width: 50%;
+    }
+
+    #founder figure img {
+        box-shadow: 0 0 100px yellow;
+    }
+
+    main h2, main h3{
+        margin: 1rem 1rem;
+    }
+
+    #welcome p {
+        box-shadow: 0 0 0;
+        margin: 1rem;
+        animation: barAnimation2 10s infinite;
+    }
 }

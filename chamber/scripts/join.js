@@ -35,7 +35,7 @@ async function getDataMembershiops() {
 }
 
 function displayMemberships(object, space) {
-    //Function to create and siplay the elements into the HTML
+    //Function to create and display the elements into the HTML
 
     object.forEach(element => {
 
