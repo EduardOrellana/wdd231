@@ -1,32 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Erick Eduardo Orellana Umaña">
-    <meta name="description" content="">
-    <link rel="icon" href="">
+    <meta name="description" content="Web Page of a Online Store of cars called autoErorella">
+    <link rel="icon" href="images/favicon.ico">
     <title></title>
-    <link href="" type="text/css" rel="stylesheet">
-    <script src="" defer></script>
+    <link href="styles/base.css" type="text/css" rel="stylesheet">
+    <link href="styles/home.css" type="text/css" rel="stylesheet">
+    <script type="module" src="scripts/home.js"></script>
 
-    <!--Font-->
+    <!--Font 1-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+
+    <!--Font 2-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kanit&display=swap"
+        rel="stylesheet">
 
     <!--Open Graphs-->
-    <meta property="og:title" content=""/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:image" content=""/>
-    <meta property="og:url" content=""/>
+    <meta property="og:title" content="autoErorella - Web Page - AutoCommerce" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://eduardorellana.github.io/wdd231/project/images/logo-autoErorella.webp" />
+    <meta property="og:url" content="https://eduardorellana.github.io/wdd231/project/index.html" />
 </head>
+
 <body>
     <header>
+        <section id="icon-container">
+            <figure>
+                <img id="logo-page" src="images/logo-autoErorella.webp" alt="logo Web Site" width="150" height="150"
+                    loading="lazy">
+                <figcaption>Logo Web Site - autoErorella</figcaption>
+            </figure>
+        </section>
+        <h1>autoErorella</h1>
+        <div id="navigation-container">
+            <button id="menu" name="menu" title="hamburgerMenu"></button>
+            <nav id="navMenu">
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#" class="active">Collection</a></li>
+                    <li><a href="#" class="active">Get Info</a></li>
+                    <li><a href="#" class="active">FAQ and About Us</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
     </main>
     <footer>
+        <p>
+            <span>&copy;</span>
+            <span id="currentyear"></span>
+            Erick Orellana
+            Guatemala
+        </p>
+        <p id="modified"></p>
+        <hr>
+        <img src="images/flag.webp" width="50" height="35" loading="lazy" alt="guatemalaFlag">
     </footer>
 </body>
+
 </html>
