@@ -1,0 +1,27 @@
+@keyframes car-icon {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: -100%;
+    }
+
+}
+
+
+.icon-car {
+    position: relative;
+}
+
+#car1 {
+    position: absolute;
+    animation: car-icon 7s linear infinite;
+    background: none;
+}
+
+#car2 {
+    position: absolute;
+    animation: car-icon 5s linear infinite 1s;
+    background: none;
+}
