@@ -1,3 +1,7 @@
+header {
+    position: inherit;
+}
+
 @keyframes car-icon {
     from {
         left: 100%;
@@ -11,17 +15,41 @@
 
 
 .icon-car {
-    position: relative;
+    display: none;
 }
 
 #car1 {
-    position: absolute;
-    animation: car-icon 7s linear infinite;
-    background: none;
+    display: none;
 }
 
 #car2 {
-    position: absolute;
-    animation: car-icon 5s linear infinite 1s;
-    background: none;
+    display: none;
+}
+
+#video-container {
+    max-width: 100%;
+}
+
+#hero-video {
+    width: 100%;
+    border: 5px solid black;
+}
+
+@media screen and (min-width: 820px){
+
+    .icon-car {
+        position: relative;
+    }
+    
+    #car1 {
+        position: absolute;
+        animation: car-icon 7s linear infinite;
+        background: none;
+    }
+    
+    #car2 {
+        position: absolute;
+        animation: car-icon 5s linear infinite 1s;
+        background: none;
+    }
 }

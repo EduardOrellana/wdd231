@@ -6,7 +6,7 @@ Thi base page, contains the full style of the header and footer of the pages.
     --primaryColor: #C6EBBE;
     --secondColor: #A9DBB8;
     --accent1Color: #7CA5B8;
-    --backGroundColor: #38369A;
+    --backGroundColor: #030220;
 
     --headingFont: "Source Sons 3", sans-serif;
     --paragraphFont: "Montserrat", sans-serif;
@@ -115,11 +115,16 @@ header h1::after {
     color: var(--primaryColor);
 }
 
+footer {
+    text-align: center;
+    text-decoration: none;
+}
+
 /*Large View*/
 @media screen and (min-width: 820px) {
 
     body {
-        margin: 1rem;
+        margin: 0;
     }
 
     header {
