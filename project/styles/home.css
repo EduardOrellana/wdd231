@@ -39,17 +39,20 @@ header {
 
     .icon-car {
         position: relative;
+        display: block;
     }
     
     #car1 {
         position: absolute;
         animation: car-icon 7s linear infinite;
         background: none;
+        display: inline;
     }
     
     #car2 {
         position: absolute;
         animation: car-icon 5s linear infinite 1s;
         background: none;
+        display: inline;
     }
 }

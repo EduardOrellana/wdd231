@@ -41,7 +41,7 @@ async function getDataDirectory() {
         }
 
         const objectData = await response.json();
-        // console.log(objectData.directory);
+        console.log(objectData.directory);
         displayDirectory(objectData.directory);
     
     } catch(error) {
