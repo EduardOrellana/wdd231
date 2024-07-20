@@ -48,14 +48,41 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="collection.html">Collection</a></li>
                     <li><a href="get-car.html" class="active">Get A Car</a></li>
-                    <li><a href="faq.html">FAQ and About Us</a></li>
                     <li><a href="video-tuturing.html">Video - Tutoring</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-        <!--Insert Custom Main-->
+        <div id="form">
+            <!--Insert Custom Main-->
+            <form method="get" class="form1" action="thanku.html">
+                <fieldset id="personal-information">
+                    <legend>Personal Information</legend>
+                    <label class="required" for="first-name">First Name:</label>
+                    <input type="text" autocomplete="given-name" name="first-name" id="first-name" required
+                        title="First Name">
+                    <label class="required" for="last-name">Last Name:</label>
+                    <input type="text" autocomplete="family-name" name="last-name" id="last-name" required
+                        title="Last Name">
+                    <label class="required" for="email">Email Addres:</label>
+                    <input type="email" autocomplete="email" name="email" id="email" required
+                        placeholder="example@gmail.com" title="Your Email Address">
+                    <label class="required" for="phone-number">Phone Number:</label>
+                    <input type="tel" autocomplete="tel" name="phone-numer" id="phone-number" required
+                        placeholder="+(502) 54134" title="Your phone Number with country code">
+                </fieldset>
+                <fieldset id="car-section">
+                    <legend>Car Section</legend>
+                    <label class="required" for="cars-list">Choose the Car</label>
+                    <select id="cars-list" name="cars-list" title="Cars">
+
+                    </select>
+                </fieldset>
+                <input type="hidden" id="timestamp" name="timestamp">
+                <input type="submit" id="button-submitt" name="submit" value="Buy">
+            </form>
+        </div>
     </main>
     <footer>
         <div>

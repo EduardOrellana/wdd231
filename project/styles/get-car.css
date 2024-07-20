@@ -1,0 +1,62 @@
+:root {
+    --primaryColor: #C6EBBE;
+    --secondColor: #A9DBB8;
+    --accent1Color: #7CA5B8;
+    --backGroundColor: #030220;
+
+    --headingFont: "Source Sons 3", sans-serif;
+    --paragraphFont: "Montserrat", sans-serif;
+}
+
+.required::before {
+    content: "*";
+    color: red;
+}
+
+main {
+    background-color: var(--accent1Color);
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    align-content: center;
+}
+
+form {
+    background-color: var(--thirdColor);
+    padding: 1rem;
+    border-radius: 15px;
+}
+
+.form1 fieldset {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--backgroundColor);
+    border-radius: 15px;
+}
+
+.form1 fieldset label,
+.form1 fieldset input {
+    padding: 1rem;
+    font-family: var(--primaryFont);
+}
+
+form fieldset legend {
+    text-align: center;
+    color: var(--textColor);
+    font-size: 110%;
+    font-weight: bold;
+}
+
+#button-submitt {
+    width: 10rem;
+    height: 6rem;
+    padding: 1rem;
+    margin: 1rem;
+    text-align: center;
+    font-size: 110%;
+}

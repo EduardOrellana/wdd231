@@ -267,6 +267,16 @@ class DisplayItems {
         const trucks = this.item.filter(truck => truck.category === "Truck");
         return trucks;
     }
+
+    get_names_cars(object = this.item){
+        let cars = [];
+
+        object.forEach(i => {
+            cars.push(i.name);
+        })
+
+        return cars;
+    }
 }
 
 export default generalData;
