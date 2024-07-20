@@ -20,7 +20,6 @@ class Footer_and_HamBurger {
         hamButton.addEventListener('click', () => {
             navigation.classList.toggle('open');
             hamButton.classList.toggle('open');
-            this.classList.toggle('open');
         });
 
     }
@@ -84,5 +83,98 @@ const generalData = {
 
 }
 
+class DisplayItems {
+
+    constructor(item, container, dial) {
+        this.item = item;
+        this.container = container;
+        this.dial = dial;
+    }
+
+    displayItems_Image_Title(object) {
+        //This Method will display the items for the cars
+        object = this.item;
+
+        object.forEach(i => {
+
+            let imagen = document.createElement('img');
+            let title = document.createElement('h3');
+            
+            imagen.setAttribute('src', i.ilustration);
+            imagen.setAttribute('alt', `${i.brand}`);
+            imagen.setAttribute('width', 200);
+            imagen.setAttribute('height', 200);
+            imagen.setAttribute('loading', 'lazy');
+
+            title.textContent = `${i.name}`;
+            
+            this.container.appendChild(title);
+            this.container.appendChild(imagen);
+        })
+    }
+
+    display_three_random_cars(object){
+
+        object = this.item;
+
+        const selectIndexes = new Set();
+
+        function getRandomNumber(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        while (selectIndexes.size < 3){
+            let index = getRandomNumber(0, object.length -1);
+    
+            if (!selectIndexes.has(index)){
+                selectIndexes.add(index);
+    
+                let imagen = document.createElement('img');
+                let title = document.createElement('h3');
+                
+                imagen.setAttribute('src', object[index].ilustration);
+                imagen.setAttribute('alt', `${object[index].brand}`);
+                imagen.setAttribute('width', 200);
+                imagen.setAttribute('height', 200);
+                imagen.setAttribute('loading', 'lazy');
+    
+                title.textContent = `${object[index].name}`;
+                
+                // this.container.appendChild(title);
+                this.container.appendChild(imagen);
+
+                imagen.addEventListener('click', (event) =>{
+                    event.preventDefault();
+                    this.display_dialog(object[index]);
+                })
+            }
+        }
+    }
+
+    display_dialog(item) {
+        if (this.dial) {
+            this.dial.innerHTML = '';
+            this.dial.innerHTML = `
+            <button id="closeModal">❌</button>
+            <h2>${item.name}</h2>
+            <h3>${item.category}</h3>
+            <p><strong>Year: </strong> ${item.year}</p>
+            <p><strong>Fuel: </strong> ${item.fuel}</p>
+            <p><strong>Price: </strong> ${item.price}</p>
+            <p><strong>Color: </strong> ${item.color}</p>
+            `;
+            this.dial.showModal();
+            this.dial.classList.add('open');
+        
+            const closeModal = document.getElementById('closeModal');
+            closeModal.addEventListener('click', (event) => {
+                event.preventDefault();
+                this.dial.classList.remove('open');
+                this.dial.close();
+            });
+        }
+    }
+}
+
 export default generalData;
-export { DisplayFetch, Footer_and_HamBurger };
+export { DisplayFetch, Footer_and_HamBurger, DisplayItems };

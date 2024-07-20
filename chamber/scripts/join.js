@@ -57,7 +57,7 @@ function displayMemberships(object, space) {
 
         space.appendChild(card);
 
-        imageLogo.addEventListener('click', () => {      
+        imageLogo.addEventListener('click', () => {  
             displayDetailsMemberships(element);
         })
     });

@@ -19,6 +19,7 @@ Thi base page, contains the full style of the header and footer of the pages.
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 body {
@@ -28,6 +29,10 @@ body {
 
 header {
     display: block;
+}
+
+.active::after {
+    content: "🔔";
 }
 
 #logo-page {
@@ -49,6 +54,10 @@ header h1 {
     position: absolute;
     top: 15px;
     left: 120px;
+}
+
+h2, h3 {
+    font-family: var(--headingFont);
 }
 
 #menu {
@@ -116,6 +125,21 @@ footer {
     text-decoration: none;
 }
 
+#social-media {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem;
+}
+
+#information-general{
+    display: block;
+    margin: 1rem;
+}
+
+#information-general *{
+    font-size: small;
+}
+
 /*Large View*/
 @media screen and (min-width: 820px) {
 
@@ -133,6 +157,10 @@ footer {
 
     #icon-container {
         grid-column: 1/2;
+    }
+
+    .active::after {
+        content: inherit;
     }
 
     header h1 {
@@ -172,7 +200,7 @@ footer {
         transition: none;
         opacity: 1;
         font-size: 120%;
-        transition: border, transform, padding 2s;
+        transition: all 2s;
     }
 
     #navMenu a:hover {
@@ -185,12 +213,17 @@ footer {
         display: flex;
         justify-content: space-around;
         text-align: center;
+        position: relative;
+    }
+    
+    footer div {
+        display: block;
+        position: absolute;
+        top: 100%;
     }
 
     footer hr {
         display: none;
         flex-wrap: wrap;
     }
-
-
 }

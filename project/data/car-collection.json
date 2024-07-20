@@ -49,7 +49,7 @@
             "transmission": "6-speed manual",
             "fuel": "Gasoline",
             "ilustration": "https://raw.githubusercontent.com/EduardOrellana/wdd231/main/project/images/Nissan%20Skyline%20GTR%20R35.webp",
-            "price": "",
+            "price": "Q.150,656.28",
             "color": "blue"
         },
         {
@@ -62,7 +62,7 @@
             "transmission": "6-speed dual-clutch",
             "fuel": "Gasoline",
             "ilustration": "https://raw.githubusercontent.com/EduardOrellana/wdd231/main/project/images/Nissan%20Skyline%20GTR.webp",
-            "price": "",
+            "price": "Q.110,000.00",
             "color": "blue"
         },
         {
@@ -75,7 +75,7 @@
             "transmission": "9-speed automatic",
             "fuel": "Gasoline",
             "ilustration": "https://raw.githubusercontent.com/EduardOrellana/wdd231/main/project/images/Nissan%C2%A0Frontier.webp",
-            "price": "",
+            "price": "Q.220,000.00",
             "color": "white"
         },
         {
@@ -88,8 +88,8 @@
             "transmission": "6-speed manual",
             "fuel": "Gasoline",
             "ilustration": "https://raw.githubusercontent.com/EduardOrellana/wdd231/main/project/images/Subaru%20impreza%20sti%202004.webp",
-            "price": "",
-            "color": ""
+            "price": "Q.90,000.00",
+            "color": "blue"
         },
         {
             "name": "Toyota Hilux",
@@ -101,7 +101,7 @@
             "transmission": "6-speed automatic",
             "fuel": "Diesel",
             "ilustration": "https://raw.githubusercontent.com/EduardOrellana/wdd231/main/project/images/Toyota%20Hilux.webp",
-            "price": "",
+            "price": "Q.350,000.00",
             "color": "gray"
         },
         {
@@ -114,8 +114,8 @@
             "transmission": "8-speed automatic",
             "fuel": "Gasoline",
             "ilustration": "https://raw.githubusercontent.com/EduardOrellana/wdd231/main/project/images/Toyota%20Supra%20MK4.webp",
-            "price": "",
-            "color": ""
+            "price": "Q.95,000.00",
+            "color": "gray"
         },
         {
             "name": "Volkswagen Amarok",
@@ -127,8 +127,8 @@
             "transmission": "8-speed automatic",
             "fuel": "Diesel",
             "ilustration": "https://raw.githubusercontent.com/EduardOrellana/wdd231/main/project/images/Wollkswagem%20Amarok.webp",
-            "price": "",
-            "color": ""
+            "price": "Q.228,500.00",
+            "color": "black"
         }
     ]
 }

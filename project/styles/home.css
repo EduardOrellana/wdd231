@@ -1,3 +1,15 @@
+
+:root {
+    --primaryColor: #C6EBBE;
+    --secondColor: #A9DBB8;
+    --accent1Color: #7CA5B8;
+    --backGroundColor: #030220;
+
+    --headingFont: "Source Sons 3", sans-serif;
+    --paragraphFont: "Montserrat", sans-serif;
+}
+
+
 header {
     position: inherit;
 }
@@ -13,6 +25,9 @@ header {
 
 }
 
+main {
+    text-align: center;
+}
 
 .icon-car {
     display: none;
@@ -35,6 +50,103 @@ header {
     border: 5px solid black;
 }
 
+.cars-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 250%;
+    text-align: center;
+}
+
+.cars-container > img {
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 15px;
+    transition: all 3s;
+}
+
+.cars-container > img:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    box-shadow: 0 0 5px var(--secondColor);
+}
+
+dialog {
+    border: 2px solid var(--secondColor);
+    border-radius: 25px;
+    padding: 1rem;
+    background-color: var(--accent1Color);
+    max-width: 80%;
+    width: 50%;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity,transform 1s ease-in-out;
+    position: fixed;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    text-align: center;
+}
+
+dialog.open {
+    opacity: 1;
+    transform: scale(1);
+}
+
+::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+dialog button {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+dialog button:hover {
+    cursor: pointer;
+}
+
+dialog * {
+    background-color: var(--accent1Color);
+    color: var(--backGroundColor);
+    font-weight: bold;
+    font-size: 110%;
+}
+
+#location iframe{
+    width: 80%;
+    height: 500px;
+    border-radius: 15px;
+}
+
+.vision-mission {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.vision-mission * {
+    color: black;
+    font-weight: 200;
+    background-color: var(--secondColor);
+}
+
+.vision-mission p {
+    font-weight: bold;
+    font-size: 140%;
+}
+
+#vision, #mission {
+    border: 3px solid var(--accent1Color);
+    padding: 0.5rem;
+    border-radius: 15px;
+}
+
 @media screen and (min-width: 820px){
 
     .icon-car {
@@ -54,5 +166,22 @@ header {
         animation: car-icon 5s linear infinite 1s;
         background: none;
         display: inline;
+    }
+
+    .cars-container {
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0;
+    }
+
+    .cars-container img {
+        width: 300px;
+    }
+
+    #location-vision-mission {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        align-items: center;
     }
 }
