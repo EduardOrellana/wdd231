@@ -8,55 +8,75 @@
     --paragraphFont: "Montserrat", sans-serif;
 }
 
+main {
+    background-color: var(--accent1Color);
+    padding-bottom: 1rem;
+}
+
+#hero-image-background {
+    max-width: 100%;
+    display: none;
+}
+
+#form {
+    width: 80%;
+    margin: 0 auto;
+    align-content: center;
+    border-radius: 25px;
+}
+
+form {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+}
+
+form * {
+    margin: 1rem 0;
+    text-align: center;
+    padding: 0.5rem 0;
+    color: white;
+}
+
+#personal-information input,
+#car-section select {
+    margin: 0 auto;
+    width: 95%;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+}
+
 .required::before {
     content: "*";
     color: red;
 }
 
-main {
-    background-color: var(--accent1Color);
-}
-
-#form {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    margin: 0 auto;
-    align-content: center;
-}
-
-form {
-    background-color: var(--thirdColor);
-    padding: 1rem;
-    border-radius: 15px;
-}
-
-.form1 fieldset {
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    background-color: var(--backgroundColor);
-    border-radius: 15px;
-}
-
-.form1 fieldset label,
-.form1 fieldset input {
-    padding: 1rem;
-    font-family: var(--primaryFont);
-}
-
-form fieldset legend {
-    text-align: center;
-    color: var(--textColor);
-    font-size: 110%;
-    font-weight: bold;
-}
-
 #button-submitt {
-    width: 10rem;
     height: 6rem;
     padding: 1rem;
     margin: 1rem;
     text-align: center;
-    font-size: 110%;
+    font-size: 150%;
+    font-weight: bold;
+    background-color: var(--accent1Color);
+    color: var(--backGroundColor);
+    border-radius: 15px;
+}
+
+@media screen and (min-width: 820px) {
+    main {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    #hero-image-background {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
 }
